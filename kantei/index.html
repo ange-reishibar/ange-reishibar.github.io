@@ -23,8 +23,11 @@
 
   ■ 使い方
   ・https://ange-reishibar.github.io/kantei/ をそのまま送る
-    → 下の CONFIG.DEADLINE の日の23:59まで、通常価格（取り消し線）・3名様限定の特別価格を表示
-    → DEADLINE を空にすると「1日5人まで受付」の表示に戻る
+    → その人がこのページを初めて開いてから CONFIG.HOURS 時間（24時間）だけ、
+      通常価格（取り消し線）・3名様限定の特別価格と残り時間を表示。過ぎたら申込ボタンが消える
+    → 初めて開いた時刻は、その人のブラウザ（localStorage）に保存。
+      別のスマホ・別のブラウザ・シークレットモードで開くと、そこから24時間になる
+    → HOURS を 0 にすると「1日5人まで受付」の表示に戻る
   ・期限つきで送るときだけ、最後に ?d=YYYY-MM-DD を付ける
     例）…/kantei/?d=2026-11-16 → 11/16 23:59（日本時間）まで残り時間を表示し、
         過ぎたら申込ボタンが消えて「LINEでアンジュに送る」だけになる
@@ -253,7 +256,8 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
   <div class="wrap">
     <div class="open-only">
       <span class="tag">本格霊視鑑定 受付中</span>
-      <p class="t d-only"><span id="dl-date">--</span> 23:59まで<br>3名様限定の特別価格よ</p>
+      <p class="t d-only"><span class="js-head">--</span><br>3名様限定の特別価格よ</p>
+      <p class="p d-only" style="margin-top:2px"><span id="dl-date">--</span>まで</p>
       <p class="t no-d">ひとりひとりと向き合うため、1日5人までの受付よ</p>
       <p class="p no-d">（粋）<b>4,980円</b>　／　（極）<b>9,980円</b></p>
       <p class="p d-only">（粋）<s>通常10,000円</s> → <b>4,980円</b><br>（極）<s>通常20,000円</s> → <b>9,980円</b><br><span style="font-size:12px">枠が埋まり次第、通常価格に戻るわ</span></p>
@@ -394,7 +398,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
         <h3>アンジュの本格霊視鑑定<span class="kj">（粋）</span></h3>
         <p class="was d-only">通常価格 <s>10,000円</s></p>
         <div class="price">4,980<small>円（税込）</small></div>
-        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only"><span class="dl-mini"></span>23:59まで・3名様限定の特別価格</span></p>
+        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only"><span class="dl-mini"></span>まで・3名様限定の特別価格</span></p>
         <p class="what">いちばん気になっていることを一つ。いまの流れと、相手の本音と、明日からの動き方まで、まっすぐお伝えするわ。</p>
         <ul>
           <li>今のあなたの、状況と流れ</li>
@@ -420,7 +424,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
         <h3>アンジュの本格霊視鑑定<span class="kj">（極）</span></h3>
         <p class="was d-only">通常価格 <s>20,000円</s></p>
         <div class="price">9,980<small>円（税込）</small></div>
-        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only"><span class="dl-mini"></span>23:59まで・3名様限定の特別価格</span></p>
+        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only"><span class="dl-mini"></span>まで・3名様限定の特別価格</span></p>
         <p class="what">霊視だけじゃないの。<em>波動分析・波動調整・現状エネルギー、そして未来の整え方</em>まで。あなたの魂の声と真正面から向き合い、“最幸”な未来へと導くサポートよ。ご相談は2つまで、6か月先までの流れと、守護霊からのメッセージもお届けするわ。</p>
         <ul>
           <li>今のあなたの、状況と流れ</li>
@@ -563,7 +567,7 @@ var CONFIG = {
   STORES_GOKU: "",   // ② アンジュの本格霊視鑑定（極）のSTORES商品URL
   TOKUSHOHO:     "",   // STORESの特定商取引法ページのURL
   LINE:          "https://lin.ee/WIepITO",  // アンジュの公式LINE
-  DEADLINE:      "2026-11-16"   // URLに ?d= がないときの期限（この日の23:59・日本時間まで特別価格）。空にすると「1日5人まで」表示
+  HOURS:         24   // このページを初めて開いてから何時間、特別価格にするか（0で「1日5人まで」表示）
 };
 /* ============================================================ */
 
@@ -577,13 +581,24 @@ var CONFIG = {
   if (CONFIG.TOKUSHOHO) { tk.href = CONFIG.TOKUSHOHO; tk.target = "_blank"; tk.rel = "noopener"; } else { tk.style.display = "none"; }
   if (!CONFIG.STORES_SUI || !CONFIG.STORES_GOKU) console.warn("STORESの商品URLが未設定です（いまはLINEに飛びます）");
 
-  /* 期限：?d=YYYY-MM-DD → その日の23:59:59（日本時間）まで */
-  var m = location.search.match(/[?&]d=(\d{4})-?(\d{2})-?(\d{2})/) || (CONFIG.DEADLINE || "").match(/(\d{4})-?(\d{2})-?(\d{2})/);
+  /* 期限：?d=YYYY-MM-DD があればその日の23:59:59（日本時間）まで。
+     なければ、このブラウザで初めて開いた時刻から CONFIG.HOURS 時間 */
+  var m = location.search.match(/[?&]d=(\d{4})-?(\d{2})-?(\d{2})/), end = 0, head = "";
   if (m) {
-    var end = Date.UTC(+m[1], +m[2]-1, +m[3], 23-9, 59, 59);
+    end = Date.UTC(+m[1], +m[2]-1, +m[3], 23-9, 59, 59);
+    head = "ご案内の期限";
+  } else if (CONFIG.HOURS > 0) {
+    var KEY = "ange_kantei_first_open", first = 0;
+    try { first = +localStorage.getItem(KEY) || 0; if (!first) { first = Date.now(); localStorage.setItem(KEY, String(first)); } } catch (e) { first = Date.now(); }
+    end = first + CONFIG.HOURS * 3600 * 1000;
+    head = "このページを開いてから" + CONFIG.HOURS + "時間限定";
+  }
+  if (end) {
     b.classList.add("has-d");
-    var wk = "日月火水木金土".charAt(new Date(Date.UTC(+m[1], +m[2]-1, +m[3])).getUTCDay());
-    var label = (+m[2]) + "月" + (+m[3]) + "日（" + wk + "）";
+    var jt = new Date(end + 9 * 3600 * 1000);   // 日本時間で表示
+    function p2(n){ return (n<10?"0":"")+n; }
+    var label = (jt.getUTCMonth()+1) + "月" + jt.getUTCDate() + "日（" + "日月火水木金土".charAt(jt.getUTCDay()) + "）" + p2(jt.getUTCHours()) + ":" + p2(jt.getUTCMinutes());
+    document.querySelectorAll(".js-head").forEach(function(x){ x.textContent = head; });
     document.getElementById("dl-date").textContent = label;
     document.querySelectorAll(".dl-mini").forEach(function(x){ x.textContent = label; });
     var el = { d:cd("cd-d"), h:cd("cd-h"), m:cd("cd-m"), s:cd("cd-s"), st:cd("st-rm") };
