@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>アンジュの本格霊視鑑定｜霊視bar アンジュ</title>
+<meta name="description" content="オネエの霊視ママ・アンジュの本格霊視鑑定。（一杯）と（ボトル）、二つのメニューのご案内です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<!--
+  ============================================================
+  アンジュ 本格霊視鑑定 詳細ページ（玄道 kantei ページと同じ作り）
+  作成：2026-11-15
+
+  ■ 世界観
+  アンジュ＝オカマ霊視barのオーナー（オネエの霊視ママ）。
+  黒・紫のネオン・金の仮面・赤い提灯。メニューは bar に合わせて
+  （一杯）4,980円 ／（ボトル）9,980円 ※仮の案。変えるときは全体を置きかえ。
+
+  ■ 使い方
+  ・ふだんは https://（アカウント名）.github.io/（リポジトリ）/kantei/ をそのまま送る
+    → 「1日5人まで受付」と表示（STORESの在庫5と同じルール）
+  ・期限つきで送るときだけ、最後に ?d=YYYY-MM-DD を付ける
+    例）…/kantei/?d=2026-11-16 → 11/16 23:59（日本時間）まで残り時間を表示し、
+        過ぎたら申込ボタンが消えて「LINEでアンジュに送る」だけになる
+
+  ■ 公開前に入れるもの（下の CONFIG）
+  ・STORESの（一杯）（ボトル）の商品URL、特定商取引法ページのURL
+    → 空のあいだは、申込ボタンを押すとLINEが開きます
+
+  ■ わざと入れていないもの
+  ・通常価格10,000円の取り消し線 … 実際にその価格で売った記録がそろってから
+  ・「残りわずか」「累計○名」 … 本当の数字が出てから
+  ============================================================
+-->
+<style>
+:root{
+  --bg:#0B0910; --bg2:#120E17; --bg3:#18121E;
+  --paper:#F1E9DC; --mute:#AEA2B0; --dim:#7E7383;
+  --gold:#D2AE5E; --gold-hi:#F0D592; --gold-lo:#7E6430;
+  --neon:#D46BD8; --neon-l:#EBA4EE;
+  --red:#D2463A; --red-l:#F07A6A;
+  --line:rgba(210,174,94,.28);
+  --cta-a:#F0D592; --cta-b:#D2AE5E; --cta-c:#A07C33; --cta-ink:#1E1407;
+  --r:6px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;line-height:2.05;letter-spacing:.04em;overflow-x:hidden;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.05;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+body>*{position:relative;z-index:1}
+img{max-width:100%;display:block}
+a{color:inherit}
+strong{color:var(--gold-hi);font-weight:700}
+em{font-style:normal;color:var(--gold-hi);background:linear-gradient(transparent 62%,rgba(212,107,216,.3) 62%)}
+.wrap{max-width:620px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+section.alt{background:var(--bg2)}
+section.alt::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,107,216,.55),transparent)}
+.center{text-align:center}
+p+p{margin-top:1.3em}
+
+/* 見出し */
+.chap{text-align:center;margin-bottom:38px}
+.chap .no{font-family:"Cormorant Garamond",serif;font-size:15px;letter-spacing:.4em;color:var(--gold)}
+.chap .en{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:15px;letter-spacing:.16em;color:var(--neon-l);text-shadow:0 0 12px rgba(212,107,216,.7);margin-top:2px}
+.chap h2{font-size:25px;line-height:1.6;font-weight:700;letter-spacing:.1em;color:var(--paper);margin-top:14px}
+.chap h2::after{content:"";display:block;width:1px;height:38px;margin:20px auto 0;background:linear-gradient(180deg,var(--gold),transparent)}
+.lead{font-size:20px;line-height:1.9;font-weight:700;text-align:center;color:var(--gold-hi);margin:42px 0}
+.note{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;line-height:1.8;color:var(--dim);letter-spacing:.02em}
+.box{border:1px solid var(--line);background:var(--bg3);padding:26px 24px;border-radius:var(--r)}
+.quote{border-left:2px solid var(--neon);padding:4px 0 4px 18px;color:var(--gold-hi);font-weight:600}
+.say{position:relative;background:var(--bg3);border:1px solid rgba(212,107,216,.35);border-radius:14px;padding:18px 20px 18px 74px;margin-top:28px}
+.say::before{content:"";position:absolute;left:16px;top:16px;width:44px;height:44px;border-radius:50%;background:url("img/ange.jpg") 58% 28%/220% no-repeat;border:1px solid var(--gold)}
+.say b{display:block;font-family:"Noto Sans JP",sans-serif;font-size:11.5px;color:var(--neon-l);letter-spacing:.14em;font-weight:500}
+
+/* ヒーロー */
+.hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:flex-end;padding:0 0 64px;overflow:hidden}
+.hero .ph{position:absolute;inset:0;background:url("img/ange.jpg") 52% 28%/cover no-repeat;filter:saturate(.95) brightness(.85)}
+.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,9,16,.35) 0%,rgba(11,9,16,0) 28%,rgba(11,9,16,.7) 58%,var(--bg) 95%)}
+.hero .frame{position:absolute;inset:14px;border:1px solid rgba(210,174,94,.5);pointer-events:none}
+.hero .sign-neon{position:absolute;top:34px;left:0;right:0;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;letter-spacing:.3em;color:#FBE3FC;text-shadow:0 0 6px var(--neon),0 0 18px var(--neon),0 0 36px rgba(212,107,216,.8);animation:flick 6s infinite}
+@keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.4}94%{opacity:1}96%{opacity:.6}}
+.hero .in{position:relative;width:100%}
+.hero .who{font-size:14px;letter-spacing:.24em;color:var(--gold)}
+.hero .who b{font-size:20px;color:var(--paper);margin-left:8px;letter-spacing:.3em}
+.hero h1{font-size:34px;line-height:1.45;font-weight:800;letter-spacing:.08em;margin:16px 0 0;text-shadow:0 2px 18px rgba(0,0,0,.8)}
+.hero h1 small{display:block;font-size:17px;color:var(--gold-hi);letter-spacing:.24em;font-weight:600;margin-bottom:6px}
+.hero .catch{font-size:18px;line-height:1.9;margin-top:22px;text-shadow:0 2px 12px rgba(0,0,0,.9)}
+.hero .to{display:inline-block;margin-top:24px;font-family:"Noto Sans JP",sans-serif;font-size:12.5px;letter-spacing:.12em;border:1px solid var(--gold);color:var(--gold-hi);padding:5px 14px;background:rgba(11,9,16,.5)}
+.scroll{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-family:"Cormorant Garamond",serif;font-size:11px;letter-spacing:.4em;color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.hero .sign-neon{animation:none}}
+
+/* 受付バー */
+.deadline{background:linear-gradient(180deg,#1A1220,#0F0C14);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0;text-align:center}
+.deadline .tag{display:inline-block;font-family:"Noto Sans JP",sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--cta-ink);background:var(--gold);padding:3px 12px}
+.deadline .t{font-size:17px;font-weight:700;margin-top:12px;line-height:1.7}
+.deadline .p{font-family:"Noto Sans JP",sans-serif;font-size:14px;color:var(--mute);margin-top:6px}
+.deadline .p b{color:var(--paper);font-size:15px}
+.cd{display:flex;justify-content:center;align-items:flex-end;gap:6px;margin-top:16px;font-family:"Cormorant Garamond",serif}
+.cd .u{min-width:58px;border:1px solid var(--line);background:rgba(0,0,0,.35);padding:6px 4px 4px}
+.cd .n{display:block;font-size:34px;line-height:1;color:var(--gold-hi);font-weight:600}
+.cd .l{display:block;font-family:"Noto Sans JP",sans-serif;font-size:10.5px;color:var(--dim);letter-spacing:.1em;margin-top:3px}
+.cd .c{font-size:26px;color:var(--gold-lo);padding-bottom:16px}
+.closed{display:none}
+body.is-closed .closed{display:block}
+body.is-closed .open-only{display:none!important}
+body:not(.has-d) .d-only{display:none!important}
+body.has-d .no-d{display:none!important}
+
+/* CTA */
+.cta{display:block;width:100%;max-width:460px;margin:34px auto 0;text-align:center;text-decoration:none;color:var(--cta-ink);background:linear-gradient(180deg,var(--cta-a),var(--cta-b) 55%,var(--cta-c));border-radius:var(--r);padding:16px 18px 14px;box-shadow:0 10px 28px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);font-weight:800;letter-spacing:.08em;transition:transform .15s}
+.cta:active{transform:translateY(1px)}
+.cta .m{display:block;font-size:19px}
+.cta .s{display:block;font-family:"Noto Sans JP",sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;margin-top:2px;opacity:.85}
+.cta.ghost{background:transparent;color:var(--gold-hi);border:1px solid var(--gold);box-shadow:none}
+.cta-arrow{text-align:center;color:var(--gold);font-size:12px;margin-top:40px;letter-spacing:.3em}
+
+/* 視ること（層） */
+.layers{margin-top:34px;border-top:1px solid var(--line)}
+.layer{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px 4px;border-bottom:1px solid var(--line);align-items:start}
+.layer .k{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:600;color:#fff;background:radial-gradient(circle at 35% 30%,#E8665A,#9E2219);box-shadow:0 0 0 3px rgba(210,70,58,.18)}
+.layer .v b{display:block;font-size:16.5px;line-height:1.7}
+.layer .v span{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13px;line-height:1.75;color:var(--mute);margin-top:4px}
+.layer.btl{background:linear-gradient(90deg,rgba(212,107,216,.13),transparent)}
+.layer.btl .k{background:radial-gradient(circle at 35% 30%,#E9A6EC,#8A3590);box-shadow:0 0 0 3px rgba(212,107,216,.2),0 0 14px rgba(212,107,216,.5)}
+.layer.btl .v b::after{content:"ボトルだけ";display:inline-block;vertical-align:2px;margin-left:8px;font-family:"Noto Sans JP",sans-serif;font-size:10.5px;font-weight:700;color:var(--bg);background:var(--neon-l);padding:0 7px;border-radius:2px;letter-spacing:.06em;line-height:1.7}
+
+/* 迷い */
+.worry{list-style:none;margin-top:26px}
+.worry li{padding:12px 0 12px 30px;border-bottom:1px dashed var(--line);position:relative;line-height:1.8}
+.worry li::before{content:"";position:absolute;left:6px;top:24px;width:9px;height:9px;border:1px solid var(--neon-l);transform:rotate(45deg)}
+
+/* 比較表 */
+.cmp{width:100%;border-collapse:collapse;margin-top:28px;font-size:14.5px}
+.cmp th,.cmp td{border-bottom:1px solid var(--line);padding:11px 6px;text-align:center;line-height:1.55}
+.cmp th:first-child,.cmp td:first-child{text-align:left;color:var(--mute);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;width:38%}
+.cmp td:not(:first-child){width:31%}
+.cmp thead th{font-size:15px;color:var(--paper);padding-bottom:4px}
+.cmp thead th small{display:block;white-space:nowrap;font-size:19px;color:var(--gold-hi);font-weight:800}
+.cmp td.y{color:var(--gold-hi);font-size:17px}
+.cmp td.n{color:var(--dim)}
+.cmp .rec{background:rgba(212,107,216,.09)}
+.cmp tr.who td{font-size:12.5px;color:var(--paper);line-height:1.6}
+
+/* メニュー（プランカード） */
+.menu-head{text-align:center;margin-top:10px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:30px;letter-spacing:.3em;color:#FBE3FC;text-shadow:0 0 6px var(--neon),0 0 20px var(--neon)}
+.plan{margin-top:46px;border:1px solid var(--line);background:linear-gradient(180deg,#1D1523,#140F19);border-radius:var(--r);overflow:hidden;position:relative}
+.plan.rec{border:1px solid var(--gold);box-shadow:0 0 0 4px rgba(210,174,94,.1),0 0 40px rgba(212,107,216,.18),0 18px 50px rgba(0,0,0,.5)}
+.plan .ribbon{background:linear-gradient(90deg,var(--gold-lo),var(--gold),var(--gold-lo));color:var(--cta-ink);text-align:center;font-weight:800;font-size:14.5px;letter-spacing:.14em;padding:7px 0}
+.plan .glass{display:flex;align-items:center;justify-content:center;height:150px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 50% 120%,rgba(212,107,216,.35),transparent 65%),radial-gradient(ellipse at 50% -20%,rgba(210,70,58,.25),transparent 60%)}
+.plan .glass svg{height:104px;width:auto;filter:drop-shadow(0 0 10px rgba(240,213,146,.35))}
+.plan .body{padding:26px 22px 30px}
+.plan .eyebrow{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;color:var(--neon-l);letter-spacing:.14em}
+.plan h3{font-size:21px;line-height:1.55;margin-top:4px;letter-spacing:.06em}
+.plan h3 .kj{font-size:30px;color:var(--gold-hi)}
+.plan .price{margin-top:14px;font-family:"Cormorant Garamond",serif;font-size:46px;line-height:1;color:var(--gold-hi);font-weight:600}
+.plan .price small{font-family:"Noto Sans JP",sans-serif;font-size:14px;color:var(--mute);margin-left:4px;font-weight:400}
+.plan .lim{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;color:var(--red-l);margin-top:8px;letter-spacing:.04em}
+.plan .what{margin-top:18px;font-size:15.5px;line-height:1.95}
+.plan ul{list-style:none;margin-top:16px;border-top:1px solid var(--line)}
+.plan li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);position:relative;font-size:15px;line-height:1.75}
+.plan li::before{content:"";position:absolute;left:4px;top:19px;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.plan li.plus{color:var(--neon-l);font-weight:700}
+.plan li.plus::before{background:var(--neon);box-shadow:0 0 8px var(--neon)}
+.plan .fit{margin-top:18px;font-size:14.5px;color:var(--mute);line-height:1.9}
+.plan .deliv{margin-top:16px;font-family:"Noto Sans JP",sans-serif;font-size:12.5px;color:var(--mute);line-height:1.8;border:1px dashed var(--line);padding:10px 12px}
+
+/* お客様の声 */
+.voices{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 22px 16px;margin:30px -22px 0;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.voices img{flex:0 0 84%;max-width:420px;scroll-snap-align:center;border-radius:8px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.swipe{text-align:center;font-family:"Noto Sans JP",sans-serif;font-size:12px;color:var(--mute);letter-spacing:.1em;margin-top:6px}
+
+/* 流れ */
+.flow{list-style:none;margin-top:30px;counter-reset:f}
+.flow li{position:relative;padding:0 0 30px 58px;counter-increment:f}
+.flow li::before{content:counter(f);position:absolute;left:0;top:0;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;color:var(--gold-hi);display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:22px;background:var(--bg)}
+.flow li::after{content:"";position:absolute;left:20px;top:44px;bottom:6px;width:1px;background:var(--line)}
+.flow li:last-child::after{display:none}
+.flow .when{font-family:"Noto Sans JP",sans-serif;font-size:12px;color:var(--neon-l);letter-spacing:.1em}
+.flow b{display:block;font-size:17px;line-height:1.6;margin-top:2px}
+.flow p{font-size:14.5px;color:var(--mute);line-height:1.9;margin-top:6px}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 34px 18px 32px;position:relative;font-weight:700;line-height:1.7}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:2px;top:17px;color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:19px}
+.faq summary::after{content:"";position:absolute;right:8px;top:28px;width:8px;height:8px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg);top:32px}
+.faq .a{padding:0 4px 20px 32px;position:relative;font-size:15px;color:var(--paper);line-height:2}
+.faq .a::before{content:"A";position:absolute;left:2px;top:-1px;color:var(--neon-l);font-family:"Cormorant Garamond",serif;font-size:19px}
+
+/* 最後に */
+.from .ph{width:100%;aspect-ratio:4/3;background:url("img/ange.jpg") 55% 32%/cover no-repeat;border:1px solid var(--line);border-radius:var(--r);margin-bottom:34px;box-shadow:0 0 40px rgba(212,107,216,.15)}
+.sign{text-align:right;font-size:22px;letter-spacing:.4em;margin-top:30px;color:var(--gold-hi)}
+.sign small{font-size:13px;letter-spacing:.2em;color:var(--mute);margin-right:12px}
+
+/* フッター */
+footer{padding:46px 0 30px;border-top:1px solid var(--line);text-align:center}
+footer a{font-family:"Noto Sans JP",sans-serif;font-size:13px;color:var(--mute)}
+footer .note{text-align:left;margin-top:22px}
+footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--dim);letter-spacing:.2em;margin-top:26px}
+
+/* 下に固定のバー */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(11,9,16,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s}
+.sticky.on{transform:none}
+.sticky .in{max-width:620px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.sticky .tx{flex:1;min-width:0;font-family:"Noto Sans JP",sans-serif;font-size:11.5px;line-height:1.5;color:var(--mute)}
+.sticky .tx b{display:block;font-family:"Shippori Mincho B1",serif;font-size:16px;color:var(--gold-hi)}
+.sticky .tx .rm{color:var(--red-l)}
+.sticky a{flex:0 0 auto;white-space:nowrap;text-decoration:none;color:var(--cta-ink);background:linear-gradient(180deg,var(--cta-a),var(--cta-b));font-weight:800;font-size:15px;padding:11px 20px;border-radius:var(--r);letter-spacing:.08em}
+
+/* ふわっと出る */
+.fx{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
+.fx.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fx{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (min-width:700px){
+  body{font-size:17px}
+  .hero h1{font-size:42px}
+  .chap h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ヒーロー ===== -->
+<header class="hero">
+  <div class="ph" aria-hidden="true"></div>
+  <div class="frame" aria-hidden="true"></div>
+  <div class="sign-neon" aria-hidden="true">Bar Ange</div>
+  <div class="wrap in">
+    <div class="who">霊視bar オーナー<b>アンジュ</b></div>
+    <h1><small>オネエの本音霊視</small>アンジュの<br>本格霊視鑑定</h1>
+    <p class="catch">あら、来てくれたのね。<br>今夜は、あなたの話を<br>じっくり聞かせてちょうだい。</p>
+    <span class="to">アンジュのLINEとつながっているあなたへ</span>
+  </div>
+  <div class="scroll" aria-hidden="true">SCROLL</div>
+</header>
+
+<!-- ===== 受付 ===== -->
+<div class="deadline">
+  <div class="wrap">
+    <div class="open-only">
+      <span class="tag">本格霊視鑑定 受付中</span>
+      <p class="t d-only"><span id="dl-date">--</span> 23:59までのご案内よ</p>
+      <p class="t no-d">ひとりひとりと向き合うため、1日5人までの受付よ</p>
+      <p class="p">（一杯）<b>4,980円</b>　／　（ボトル）<b>9,980円</b></p>
+      <div class="cd d-only" aria-live="off">
+        <div class="u"><span class="n" id="cd-d">-</span><span class="l">日</span></div><span class="c">:</span>
+        <div class="u"><span class="n" id="cd-h">--</span><span class="l">時間</span></div><span class="c">:</span>
+        <div class="u"><span class="n" id="cd-m">--</span><span class="l">分</span></div><span class="c">:</span>
+        <div class="u"><span class="n" id="cd-s">--</span><span class="l">秒</span></div>
+      </div>
+    </div>
+    <div class="closed">
+      <p class="t">このご案内の期限は過ぎたわ</p>
+      <p class="p">あらためて視てほしいときは、LINEにそのまま送ってちょうだい。</p>
+      <a class="cta ghost js-line" href="#"><span class="m">LINEでアンジュに送る</span></a>
+    </div>
+    <a class="cta open-only" href="#plans"><span class="m">メニューを見る</span><span class="s">（一杯）と（ボトル）の二つ・お申し込みは1分ほど</span></a>
+  </div>
+</div>
+
+<!-- ===== I ===== -->
+<section>
+  <div class="wrap">
+    <div class="chap fx"><span class="no">I</span><span class="en">Welcome to my bar</span><h2>ここは、<br>本音を置いていく場所よ</h2></div>
+    <div class="fx">
+      <p>いらっしゃい。アンジュよ。</p>
+      <p>ここは、昼間は誰にも言えないことを、夜にそっと置いていくための霊視barなの。</p>
+      <p>同じことを何度も考えて、答えが出ないまま夜になる。<br>誰かに話したいけれど、身近な人には言えない。<br>占いアプリの結果を見ても、「で、私の場合はどうなの？」が残ってしまう。</p>
+      <p>そんな夜、あるでしょう。</p>
+    </div>
+    <p class="lead fx">あなたの話を聞いて、<br>あなただけを視る。<br>それが、本格霊視鑑定よ。</p>
+    <div class="fx">
+      <p>LINEで届く言葉や、願いの手紙を読んでいるとね、みんな本当に、ひとりで頑張っているのが伝わってくるの。</p>
+      <p>本格霊視鑑定では、まずあなたの言葉で、いまの状況と迷っていることを教えてもらうわ。そのうえで霊視をして、<em>「いま、どんな流れの中にいるのか」「ここからどう動けばいいのか」</em>を、あなたのためだけの言葉でお届けするの。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== II ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="chap fx"><span class="no">II</span><span class="en">My promise</span><h2>甘いことだけは、<br>言わないわよ</h2></div>
+    <div class="fx">
+      <p>オネエをやってるとね、男の本音も、女の本音も、だいたい分かっちゃうのよ。</p>
+      <p>だから私の鑑定は、あなたが聞きたいことだけを並べる占いじゃないの。そのかわり、<strong>あなたの味方でいることは、約束する。</strong></p>
+    </div>
+    <div class="fx" style="margin-top:30px">
+      <div class="box">
+        <p><b style="color:var(--gold-hi)">一、あなたの話を否定しない</b><br><span style="font-size:15px">どんなご相談でも、まず受けとめるわ。「こんなこと聞いていいのかな」は、ここではいらないの。</span></p>
+        <p><b style="color:var(--gold-hi)">二、不安をあおらない</b><br><span style="font-size:15px">良くない流れが視えたときも、どう動けば変えていけるかを一緒にお伝えする。怖がらせて動かすようなことは、しないわ。</span></p>
+        <p><b style="color:var(--gold-hi)">三、あいまいに終わらせない</b><br><span style="font-size:15px">「結局どうすればいいの？」で終わらせない。明日から何をすればいいのかまで、言葉にしてお渡しするわ。</span></p>
+      </div>
+    </div>
+    <div class="say fx"><b>アンジュより</b>ズバッと言うこともあるわよ。でもそれは、あなたに幸せになってほしいからなの。</div>
+    <a class="cta ghost fx open-only" href="#plans"><span class="m">アンジュに視てもらう</span><span class="s">（一杯）4,980円 ／ （ボトル）9,980円</span></a>
+  </div>
+</section>
+
+<!-- ===== III ===== -->
+<section>
+  <div class="wrap">
+    <div class="chap fx"><span class="no">III</span><span class="en">What I see</span><h2>あなたを視る、<br>5つの鑑定</h2></div>
+    <div class="fx">
+      <p>本格霊視鑑定では、あなたのご相談について、次の5つを視ていくわ。（ボトル）を選んでくれた人には、さらに深いところまで視ていくの。</p>
+    </div>
+    <div class="layers fx">
+      <div class="layer"><div class="k">1</div><div class="v"><b>今のあなたの、状況と流れ</b><span>いま、どんな流れの中にいるのか。見えている問題の奥にあるものまで読み解くわ。</span></div></div>
+      <div class="layer"><div class="k">2</div><div class="v"><b>お相手・周りの方の、本当の気持ち</b><span>お相手がいるご相談なら、相手の本音や、二人の間に流れているものを視るの。</span></div></div>
+      <div class="layer"><div class="k">3</div><div class="v"><b>これから3か月の、運気の流れ</b><span>この先、気持ちや状況がどう動いていきやすいかをお伝えするわ。</span></div></div>
+      <div class="layer"><div class="k">4</div><div class="v"><b>あなた専用の、次の一歩</b><span>「結局どうすればいいの？」で終わらせない。明日からの動き方まで。</span></div></div>
+      <div class="layer"><div class="k">5</div><div class="v"><b>鑑定文を読んだあとの、補足質問</b><span>読んで気になったところを、追加で聞いてちょうだい。（一杯）は1回、（ボトル）は30日のあいだに3回まで。</span></div></div>
+      <div class="layer btl"><div class="k">+</div><div class="v"><b>守護霊からのメッセージ</b><span>あなたのそばで、ずっとあなたを見守っている存在からの言葉を、霊視してお伝えするわ。</span></div></div>
+      <div class="layer btl"><div class="k">+</div><div class="v"><b>6か月先までの流れと、ご相談2つ</b><span>流れは3か月から6か月先まで。ご相談のテーマも、2つまで一緒に視るわ。</span></div></div>
+    </div>
+    <div class="fx" style="margin-top:40px">
+      <p>恋愛・復縁・仕事・人間関係・お金・生き方。<br>どんなテーマでも、<em>あなたの状況に合わせて</em>視ていくわ。</p>
+    </div>
+    <p class="cta-arrow">▼</p>
+    <a class="cta fx open-only" href="#plans"><span class="m">本格霊視鑑定を受ける</span><span class="s">二つのメニューから選ぶ・お申し込みは1分ほど</span></a>
+  </div>
+</section>
+
+<!-- ===== IV ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="chap fx"><span class="no">IV</span><span class="en">For you, tonight</span><h2>こんな夜を、<br>過ごしていない？</h2></div>
+    <ul class="worry fx">
+      <li>好きな人の気持ちや、二人のこれからが気になって眠れない</li>
+      <li>復縁したい人がいるけれど、動いていいのか迷っている</li>
+      <li>仕事を続けるか、変えるか、決めきれない</li>
+      <li>職場や家族との人間関係に、疲れてしまった</li>
+      <li>お金のこと、将来のことが、漠然と不安</li>
+      <li>自分が本当はどうしたいのか、分からなくなっている</li>
+      <li>一度、誰かにしっかり話を聞いてほしい</li>
+    </ul>
+    <p class="lead fx">ひとつでも当てはまったら、<br>カウンターに座ってちょうだい。</p>
+    <div class="fx">
+      <p>迷うのは、あなたが弱いからじゃないの。それだけ真剣に、自分の人生と向き合っているからよ。</p>
+      <p>ひとりで考えて出なかった答えは、ひとりで考え続けても、なかなか出ないもの。だから、私に話してみて。</p>
+    </div>
+    <a class="cta ghost fx open-only" href="#plans"><span class="m">どちらのメニューが合うか見る</span><span class="s">選び方の目安があります</span></a>
+  </div>
+</section>
+
+<!-- ===== V ===== -->
+<section id="plans">
+  <div class="wrap">
+    <div class="chap fx"><span class="no">V</span><span class="en">Menu</span><h2>二つのメニュー</h2></div>
+    <div class="fx">
+      <p class="center">どちらを選んでも、<br>おひとりずつ、私が視るわ。<br>ちがうのは、<em>どこまで深く、どこまで長く</em><br>あなたに付き合うか、よ。</p>
+    </div>
+
+    <table class="cmp fx">
+      <thead><tr><th></th><th>（一杯）<small>4,980円</small></th><th class="rec">（ボトル）<small>9,980円</small></th></tr></thead>
+      <tbody>
+        <tr><td>今の状況と流れ</td><td class="y">◯</td><td class="y rec">◯</td></tr>
+        <tr><td>お相手・周りの本当の気持ち</td><td class="y">◯</td><td class="y rec">◯</td></tr>
+        <tr><td>あなた専用の次の一歩</td><td class="y">◯</td><td class="y rec">◯</td></tr>
+        <tr><td>運気の流れ</td><td>3か月</td><td class="rec" style="color:var(--gold-hi)">6か月</td></tr>
+        <tr><td>ご相談のテーマ</td><td>1つ</td><td class="rec" style="color:var(--gold-hi)">2つまで</td></tr>
+        <tr><td>守護霊からのメッセージ</td><td class="n">—</td><td class="y rec">◯</td></tr>
+        <tr><td>補足質問</td><td>1回</td><td class="rec" style="color:var(--gold-hi)">30日で3回</td></tr>
+        <tr><td>お届けまで</td><td>3日以内</td><td class="rec" style="color:var(--gold-hi)">48時間以内<br><small style="font-size:11px">（優先）</small></td></tr>
+        <tr class="who"><td>こんな方に</td><td>まず一つ、<br>答えがほしい方</td><td class="rec">じっくり<br>向き合いたい方</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ① 一杯 -->
+    <div class="plan fx">
+      <div class="glass" aria-hidden="true">
+        <svg viewBox="0 0 80 120" fill="none" stroke="#F0D592" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h60L40 52z"/><path d="M22 24h36" stroke-opacity=".5"/><path d="M40 52v44"/><path d="M24 104h32"/><circle cx="56" cy="16" r="5" stroke="#EBA4EE"/></svg>
+      </div>
+      <div class="body">
+        <div class="eyebrow">まずは一杯、話を聞かせて</div>
+        <h3>アンジュの本格霊視鑑定<span class="kj">（一杯）</span></h3>
+        <div class="price">4,980<small>円（税込）</small></div>
+        <p class="lim open-only">1日5人まで<span class="d-only">・<span class="dl-mini"></span>23:59まで</span></p>
+        <p class="what">いちばん気になっていることを一つ。いまの流れと、相手の本音と、明日からの動き方まで、まっすぐお伝えするわ。</p>
+        <ul>
+          <li>今のあなたの、状況と流れ</li>
+          <li>お相手・周りの方の、本当の気持ち</li>
+          <li>これから3か月の、運気の流れ</li>
+          <li>あなた専用の、次の一歩</li>
+          <li>鑑定文を読んだあとの補足質問（1回）</li>
+        </ul>
+        <p class="fit">まず一つ、はっきりさせたいことがある方へ。</p>
+        <p class="deliv">ご相談テーマ：1つ（恋愛・復縁・仕事・人間関係・お金・生き方など）<br>お届け：ご相談内容を受け取ってから3日以内に、公式LINEで鑑定文を</p>
+        <a class="cta open-only js-ippai" href="#"><span class="m">（一杯）を頼む</span><span class="s">4,980円・お申し込みは1分ほど</span></a>
+      </div>
+    </div>
+
+    <!-- ② ボトル -->
+    <div class="plan rec fx">
+      <div class="ribbon">迷ったら、ボトルにしておきなさい</div>
+      <div class="glass" aria-hidden="true">
+        <svg viewBox="0 0 80 120" fill="none" stroke="#F0D592" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M33 6h14v22c0 4 12 8 12 20v62a4 4 0 0 1-4 4H25a4 4 0 0 1-4-4V48c0-12 12-16 12-20z"/><path d="M31 6h18"/><rect x="27" y="60" width="26" height="30" rx="2" stroke="#EBA4EE"/><path d="M33 75h14" stroke="#EBA4EE"/></svg>
+      </div>
+      <div class="body">
+        <div class="eyebrow">ボトルを入れて、じっくり付き合う</div>
+        <h3>アンジュの本格霊視鑑定<span class="kj">（ボトル）</span></h3>
+        <div class="price">9,980<small>円（税込）</small></div>
+        <p class="lim open-only">1日5人まで<span class="d-only">・<span class="dl-mini"></span>23:59まで</span></p>
+        <p class="what">ご相談は2つまで。6か月先までの流れと、<em>あなたを見守っている守護霊からのメッセージ</em>もお届けするわ。鑑定のあとも30日のあいだ、ボトルをキープしておくから、気になったらいつでも聞きに来てちょうだい。</p>
+        <ul>
+          <li>今のあなたの、状況と流れ</li>
+          <li>お相手・周りの方の、本当の気持ち</li>
+          <li class="plus">これから6か月の、運気の流れ</li>
+          <li>あなた専用の、次の一歩</li>
+          <li class="plus">ご相談のテーマ 2つまで</li>
+          <li class="plus">守護霊からのメッセージ</li>
+          <li class="plus">補足質問　30日のあいだに3回まで</li>
+          <li class="plus">48時間以内に、優先してお届け</li>
+        </ul>
+        <p class="fit">恋とお金、仕事と家族のように、悩みがつながっている方。同じところで何度もつまずいている気がする方は、こちらのほうがすっきり整理できるわ。</p>
+        <p class="deliv">お届け：ご相談内容を受け取ってから48時間以内に、公式LINEで鑑定文を／補足質問は鑑定文のお届けから30日間</p>
+        <a class="cta open-only js-bottle" href="#"><span class="m">（ボトル）を入れる</span><span class="s">9,980円・お申し込みは1分ほど</span></a>
+      </div>
+    </div>
+
+    <div class="fx" style="margin-top:46px">
+      <p class="center">高いほうがいい、ってものじゃないの。<br>いまのあなたに必要な深さで、大丈夫よ。</p>
+      <div class="box" style="margin-top:30px">
+        <p class="center"><b>どっちにするか迷ったら</b></p>
+        <p class="center" style="margin-top:8px;font-size:15px">いまの状況を、そのままLINEに送ってちょうだい。<br>どっちが合うか、私から返すわ。<br><span class="note">お支払いの途中で止まってしまったときも、LINEへどうぞ。</span></p>
+        <a class="cta ghost js-line" href="#"><span class="m">迷ったら、LINEでアンジュに</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VI ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="chap fx"><span class="no">VI</span><span class="en">Voices</span><h2>カウンターに座った、<br>お客様の声</h2></div>
+    <p class="center fx">神無月の本格霊視鑑定を受けてくださった方から、<br>いただいたご感想よ。</p>
+    <div class="voices fx" tabindex="0" aria-label="お客様の声（横にスワイプ）">
+      <img src="img/voice_1.jpg" alt="お客様の声1" loading="lazy">
+      <img src="img/voice_2.jpg" alt="お客様の声2" loading="lazy">
+      <img src="img/voice_3.jpg" alt="お客様の声3" loading="lazy">
+      <img src="img/voice_4.jpg" alt="お客様の声4" loading="lazy">
+      <img src="img/voice_5.jpg" alt="お客様の声5" loading="lazy">
+    </div>
+    <p class="swipe">← 横にスワイプ →</p>
+    <p class="note center" style="margin-top:14px">※個人の感想であり、結果を保証するものではありません。</p>
+  </div>
+</section>
+
+<!-- ===== VII ===== -->
+<section>
+  <div class="wrap">
+    <div class="chap fx"><span class="no">VII</span><span class="en">The flow</span><h2>鑑定が届くまで</h2></div>
+    <ol class="flow fx">
+      <li><span class="when">お申し込み</span><b>このページから、メニューを選んでご購入</b><p>お支払いが終われば、お申し込みは完了よ。</p></li>
+      <li><span class="when">ご購入のあと</span><b>公式LINEに「申し込み完了」と送る</b><p>「本格霊視鑑定（一杯）申し込み完了」／「本格霊視鑑定（ボトル）申し込み完了」とだけ送ってちょうだい。私が確認するわ。</p></li>
+      <li><span class="when">確認できたら</span><b>ご相談内容を送る</b><p>・お名前（ニックネームでOK）<br>・生年月日<br>・ご相談内容（いまの状況、いちばん知りたいこと）<br>・お相手がいる場合は、お相手のお名前と生年月日（分かれば）<br>上手にまとめなくて大丈夫。くわしく教えてくれるほど、深く視られるわ。</p></li>
+      <li><span class="when">（一杯）3日以内／（ボトル）48時間以内</span><b>公式LINEで、鑑定文をお届け</b><p>あなたのためだけの言葉で書くわ。何度でも読み返してちょうだい。</p></li>
+      <li><span class="when">読んだあと</span><b>気になったことは、補足質問で</b><p>（一杯）は1回、（ボトル）は鑑定文のお届けから30日のあいだに3回まで、追加で聞いてもらえるわ。</p></li>
+    </ol>
+    <p class="center fx" style="margin-top:8px">申し込んで終わり、じゃないの。<br><em>あなたの言葉を聞いてから、視はじめるわ。</em></p>
+    <a class="cta fx open-only" href="#plans"><span class="m">メニューを選ぶ</span><span class="s">（一杯）4,980円 ／ （ボトル）9,980円</span></a>
+  </div>
+</section>
+
+<!-- ===== VIII ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="chap fx"><span class="no">VIII</span><span class="en">Please do not</span><h2>今回は、<br>見送ってほしい人</h2></div>
+    <div class="box fx">
+      <p>いま暮らしが苦しくて、このお金を出すために、食費や家賃を削らなきゃいけない人。</p>
+      <p><strong>今回は、やめておきなさい。</strong></p>
+      <p>暮らしを削ってまで受けるものじゃないわ。LINEで届くメッセージや、無料の願いの手紙は、これからも続けていくから、まずはそこで元気を取り戻してちょうだい。</p>
+      <p>状況が変わったら、また声をかけて。このお店は、ちゃんと開けて待ってるから。</p>
+    </div>
+    <p class="lead fx">暮らしを壊さずに<br>来られる人は、<br>いらっしゃい。</p>
+    <a class="cta fx open-only" href="#plans"><span class="m">メニューを選ぶ</span><span class="s d-only">期限を過ぎると、このご案内は終わります</span><span class="s no-d">1日5人まで・お申し込みは1分ほど</span></a>
+  </div>
+</section>
+
+<!-- ===== IX ===== -->
+<section>
+  <div class="wrap">
+    <div class="chap fx"><span class="no">IX</span><span class="en">Questions</span><h2>よくある質問</h2></div>
+    <div class="faq fx">
+      <details><summary>怖いことを言われませんか。</summary><div class="a">言わないわ。怖がらせて動かすような鑑定は、私はしないの。ただ、見ないままだと同じことをくり返しやすいところは、正直にお伝えする。そのときは必ず、どう動けば変えていけるかも一緒によ。</div></details>
+      <details><summary>（一杯）と（ボトル）、どちらがいいですか。</summary><div class="a">気になることが一つで、まず答えがほしいなら（一杯）。悩みがいくつか絡み合っている人、半年先まで見ておきたい人、守護霊からのメッセージも受け取りたい人には（ボトル）をおすすめしているわ。迷ったら、LINEで状況を送って。どっちが合うか返すわね。</div></details>
+      <details><summary>どんな相談でもいいですか。</summary><div class="a">恋愛・復縁・仕事・人間関係・お金・生き方、なんでもどうぞ。ただ、生死、病気や妊娠の成否、政治、ギャンブル、試験の合否、他人の不幸につながるご相談はお受けできないの。ごめんなさいね。</div></details>
+      <details><summary>どれくらいで届きますか。</summary><div class="a">ご相談内容を受け取ってから、（一杯）は3日以内、（ボトル）は48時間以内に、公式LINEでお届けするわ。</div></details>
+      <details><summary>「1日5人まで」に入れなかったら？</summary><div class="a">5人に達した日は、翌日以降のご案内になるわ。ひとりずつちゃんと向き合うために、人数を決めているの。</div></details>
+      <details><summary>家族や周りに知られませんか。</summary><div class="a">鑑定文は公式LINEにだけお届けするわ。郵送物など、おうちに届くものは一切ないから安心して。</div></details>
+      <details><summary>あとから、お守りや道具を買う必要はありますか。</summary><div class="a">ないわ。鑑定の中で、石や道具を買うようにすすめることはないの。追加のお金はかからないわよ。鑑定のあと、続けてサポートを希望する方にはご案内を送ることがあるけど、受けるかどうかはあなたの自由よ。</div></details>
+      <details><summary>相談内容をうまく書ける自信がありません。</summary><div class="a">大丈夫。長く書かなくていいし、まとまってなくていいの。思いついたままの言葉で送ってちょうだい。</div></details>
+      <details><summary>お支払いがうまくいきません。</summary><div class="a">よくあることだから気にしないで。エラーが出た、途中で止まった、どの方法がいいか分からない。そのままLINEに送ってちょうだい。一緒に確かめるわ。</div></details>
+      <details><summary>キャンセルや返金はできますか。</summary><div class="a">鑑定文をお届けしたあとのキャンセル・返金はお受けできないの。こちらの都合でお届けできない場合は、全額お返しするわ。不安なことがあれば、ご購入の前にLINEで聞いてちょうだい。</div></details>
+    </div>
+    <a class="cta fx open-only" href="#plans"><span class="m">鑑定を申し込む</span><span class="s">（一杯） ／ （ボトル）</span></a>
+  </div>
+</section>
+
+<!-- ===== X ===== -->
+<section class="from alt">
+  <div class="wrap">
+    <div class="chap fx"><span class="no">X</span><span class="en">From Ange</span><h2>最後に</h2></div>
+    <div class="ph fx" role="img" aria-label="霊視barのカウンターにいるアンジュ"></div>
+    <div class="fx">
+      <p>このお店にはね、いろんな人が来るの。</p>
+      <p>好きな人のことで泣いている人。仕事で踏ん張りすぎて、笑い方を忘れちゃった人。家族のために頑張って、自分のことを後回しにしてきた人。</p>
+      <p>みんな、外では平気な顔をしてるのよ。でも、カウンターに座って一杯目を飲むころには、ぽろっと本音がこぼれるの。</p>
+      <p>私はその本音を、ちゃんと聞きたい。そして、あなたが明日からまた自分の足で歩けるように、本当のことを、あなたの味方としてお伝えしたいの。</p>
+      <p>甘いことだけは言わないわ。でも、あなたを一人にはしない。</p>
+    </div>
+    <p class="lead fx">迷っているあいだも、<br>夜は来るわ。<br>だったら今夜は、<br>私に話していきなさい。</p>
+    <p class="sign fx"><small>霊視bar オーナー</small>アンジュ</p>
+    <p class="cta-arrow">▼</p>
+    <a class="cta fx open-only" href="#plans"><span class="m">本格霊視鑑定を受ける</span><span class="s">（一杯）4,980円 ／ （ボトル）9,980円</span></a>
+    <a class="cta ghost fx closed" href="#" data-line="1"><span class="m">LINEでアンジュに送る</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a id="tokushoho" href="#">特定商取引法に基づく表記</a>
+    <p class="note">※ 鑑定は、未来や特定の結果をお約束するものではありません。最終的なご判断は、ご自身でなさってください。<br>※ 心身の不調やお金の大きな判断については、医療機関や専門家にもご相談ください。<br>※ アンジュはAIアバターで発信しています。誤字脱字を防ぐため、文章の確認に生成AIを使う場合があります。<br>※ 18歳未満の方は、保護者の方の同意を得てお申し込みください。<br>※ 同業の方・調査目的の方のご購入はお断りしています。</p>
+    <p class="copy">© 霊視bar アンジュ</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="in">
+    <div class="tx open-only"><b>4,980円〜</b>（一杯）／（ボトル）<span class="no-d"><br>1日5人まで受付</span><span class="d-only"><br>残り <span class="rm" id="st-rm">--</span></span></div>
+    <div class="tx closed"><b>ご案内は終わったわ</b>LINEで声をかけてね</div>
+    <a class="open-only" href="#plans">メニューを見る</a>
+    <a class="closed js-line" href="#">LINEへ</a>
+  </div>
+</div>
+
+<script>
+/* ============ CONFIG（公開前にここだけ書きかえる） ============ */
+var CONFIG = {
+  STORES_IPPAI:  "",   // ① アンジュの本格霊視鑑定（一杯）のSTORES商品URL
+  STORES_BOTTLE: "",   // ② アンジュの本格霊視鑑定（ボトル）のSTORES商品URL
+  TOKUSHOHO:     "",   // STORESの特定商取引法ページのURL
+  LINE:          "https://lin.ee/WIepITO"   // アンジュの公式LINE
+};
+/* ============================================================ */
+
+(function(){
+  var b = document.body;
+  function setHref(sel, url){ document.querySelectorAll(sel).forEach(function(a){ a.href = url || CONFIG.LINE; a.target="_blank"; a.rel="noopener"; }); }
+  setHref(".js-ippai", CONFIG.STORES_IPPAI);
+  setHref(".js-bottle", CONFIG.STORES_BOTTLE);
+  setHref(".js-line,[data-line]", CONFIG.LINE);
+  var tk = document.getElementById("tokushoho");
+  if (CONFIG.TOKUSHOHO) { tk.href = CONFIG.TOKUSHOHO; tk.target = "_blank"; tk.rel = "noopener"; } else { tk.style.display = "none"; }
+  if (!CONFIG.STORES_IPPAI || !CONFIG.STORES_BOTTLE) console.warn("STORESの商品URLが未設定です（いまはLINEに飛びます）");
+
+  /* 期限：?d=YYYY-MM-DD → その日の23:59:59（日本時間）まで */
+  var m = location.search.match(/[?&]d=(\d{4})-?(\d{2})-?(\d{2})/);
+  if (m) {
+    var end = Date.UTC(+m[1], +m[2]-1, +m[3], 23-9, 59, 59);
+    b.classList.add("has-d");
+    var wk = "日月火水木金土".charAt(new Date(Date.UTC(+m[1], +m[2]-1, +m[3])).getUTCDay());
+    var label = (+m[2]) + "月" + (+m[3]) + "日（" + wk + "）";
+    document.getElementById("dl-date").textContent = label;
+    document.querySelectorAll(".dl-mini").forEach(function(x){ x.textContent = label; });
+    var el = { d:cd("cd-d"), h:cd("cd-h"), m:cd("cd-m"), s:cd("cd-s"), st:cd("st-rm") };
+    function cd(id){ return document.getElementById(id); }
+    function pad(n){ return (n<10?"0":"")+n; }
+    var iv;
+    function tick(){
+      var t = Math.floor((end - Date.now())/1000);
+      if (t <= 0) { b.classList.add("is-closed"); clearInterval(iv); return; }
+      var d = Math.floor(t/86400), h = Math.floor(t%86400/3600), mi = Math.floor(t%3600/60), s = t%60;
+      el.d.textContent = d; el.h.textContent = pad(h); el.m.textContent = pad(mi); el.s.textContent = pad(s);
+      el.st.textContent = (d ? d + "日 " : "") + pad(h) + ":" + pad(mi) + ":" + pad(s);
+    }
+    iv = setInterval(tick, 1000); tick();
+  }
+
+  /* 下の固定バー：ヒーローを過ぎたら出す */
+  var st = document.getElementById("sticky"), hero = document.querySelector(".hero");
+  function onScroll(){ st.classList.toggle("on", window.scrollY > hero.offsetHeight * .6); }
+  window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+  /* ふわっと表示 */
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".fx").forEach(function(x){ io.observe(x); });
+  } else { document.querySelectorAll(".fx").forEach(function(x){ x.classList.add("in"); }); }
+})();
+</script>
+</body>
+</html>
