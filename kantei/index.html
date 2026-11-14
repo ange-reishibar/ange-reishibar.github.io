@@ -22,8 +22,9 @@
     → 通常価格は、実際にその価格で販売した実績があることが前提（景品表示法の二重価格表示）
 
   ■ 使い方
-  ・ふだんは https://（アカウント名）.github.io/（リポジトリ）/kantei/ をそのまま送る
-    → 「1日5人まで受付」と表示（STORESの在庫5と同じルール）
+  ・https://ange-reishibar.github.io/kantei/ をそのまま送る
+    → 下の CONFIG.DEADLINE の日の23:59まで、通常価格（取り消し線）・3名様限定の特別価格を表示
+    → DEADLINE を空にすると「1日5人まで受付」の表示に戻る
   ・期限つきで送るときだけ、最後に ?d=YYYY-MM-DD を付ける
     例）…/kantei/?d=2026-11-16 → 11/16 23:59（日本時間）まで残り時間を表示し、
         過ぎたら申込ボタンが消えて「LINEでアンジュに送る」だけになる
@@ -102,9 +103,9 @@ p+p{margin-top:1.3em}
 .deadline .p{font-family:"Noto Sans JP",sans-serif;font-size:14px;color:var(--mute);margin-top:6px}
 .deadline .p b{color:var(--paper);font-size:15px}
 .deadline .p s,.cmp s{color:var(--dim);font-size:.85em}
-.cd{display:flex;justify-content:center;align-items:flex-end;gap:6px;margin-top:16px;font-family:"Cormorant Garamond",serif}
+.cd{display:flex;justify-content:center;align-items:flex-end;gap:6px;margin-top:16px;font-family:"Shippori Mincho B1",serif}
 .cd .u{min-width:58px;border:1px solid var(--line);background:rgba(0,0,0,.35);padding:6px 4px 4px}
-.cd .n{display:block;font-size:34px;line-height:1;color:var(--gold-hi);font-weight:600}
+.cd .n{display:block;font-size:30px;line-height:1.1;color:var(--gold-hi);font-weight:800}
 .cd .l{display:block;font-family:"Noto Sans JP",sans-serif;font-size:10.5px;color:var(--dim);letter-spacing:.1em;margin-top:3px}
 .cd .c{font-size:26px;color:var(--gold-lo);padding-bottom:16px}
 .closed{display:none}
@@ -159,8 +160,8 @@ body.has-d .no-d{display:none!important}
 .plan .eyebrow{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;color:var(--neon-l);letter-spacing:.14em}
 .plan h3{font-size:21px;line-height:1.55;margin-top:4px;letter-spacing:.06em}
 .plan h3 .kj{font-size:30px;color:var(--gold-hi)}
-.plan .price{margin-top:14px;font-family:"Cormorant Garamond",serif;font-size:46px;line-height:1;color:var(--gold-hi);font-weight:600}
-.plan .price small{font-family:"Noto Sans JP",sans-serif;font-size:14px;color:var(--mute);margin-left:4px;font-weight:400}
+.plan .price{margin-top:14px;font-family:"Shippori Mincho B1",serif;font-size:42px;line-height:1.1;color:var(--gold-hi);font-weight:800;letter-spacing:.02em}
+.plan .price small{font-family:"Noto Sans JP",sans-serif;font-size:15px;color:var(--mute);margin-left:4px;font-weight:500}
 .plan .lim{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;color:var(--red-l);margin-top:8px;letter-spacing:.04em}
 .plan .what{margin-top:18px;font-size:15.5px;line-height:1.95}
 .plan ul{list-style:none;margin-top:16px;border-top:1px solid var(--line)}
@@ -561,7 +562,8 @@ var CONFIG = {
   STORES_SUI:  "",   // ① アンジュの本格霊視鑑定（粋）のSTORES商品URL
   STORES_GOKU: "",   // ② アンジュの本格霊視鑑定（極）のSTORES商品URL
   TOKUSHOHO:     "",   // STORESの特定商取引法ページのURL
-  LINE:          "https://lin.ee/WIepITO"   // アンジュの公式LINE
+  LINE:          "https://lin.ee/WIepITO",  // アンジュの公式LINE
+  DEADLINE:      "2026-11-16"   // URLに ?d= がないときの期限（この日の23:59・日本時間まで特別価格）。空にすると「1日5人まで」表示
 };
 /* ============================================================ */
 
@@ -576,7 +578,7 @@ var CONFIG = {
   if (!CONFIG.STORES_SUI || !CONFIG.STORES_GOKU) console.warn("STORESの商品URLが未設定です（いまはLINEに飛びます）");
 
   /* 期限：?d=YYYY-MM-DD → その日の23:59:59（日本時間）まで */
-  var m = location.search.match(/[?&]d=(\d{4})-?(\d{2})-?(\d{2})/);
+  var m = location.search.match(/[?&]d=(\d{4})-?(\d{2})-?(\d{2})/) || (CONFIG.DEADLINE || "").match(/(\d{4})-?(\d{2})-?(\d{2})/);
   if (m) {
     var end = Date.UTC(+m[1], +m[2]-1, +m[3], 23-9, 59, 59);
     b.classList.add("has-d");
