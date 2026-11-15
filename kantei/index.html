@@ -18,15 +18,14 @@
   アンジュ＝オカマ霊視barのオーナー（オネエの霊視ママ）。
   黒・紫のネオン・金の仮面・赤い提灯。メニューは bar に合わせて
   （粋）4,980円 ／（極）9,980円
-  ・?d= 付きのときだけ「通常価格（取り消し線）」「3名様限定」を表示
+  ・期限中だけ「通常価格（取り消し線）」「7日間限定」を表示
     → 通常価格は、実際にその価格で販売した実績があることが前提（景品表示法の二重価格表示）
 
   ■ 使い方
-  ・期限は「送った次の日の23:59（日本時間）」。3名様限定・通常価格（取り消し線）・残り時間を表示し、
-    過ぎたら申込ボタンが消えて「LINEでアンジュに送る」だけになる
-  ・送った日をきっちり基準にするには、最後に ?d=（次の日の日付）を付ける（いちばん確実）
-    例）11/15に送る → https://ange-reishibar.github.io/kantei/?d=2026-11-16
-  ・?d= を付けずに送ったときは、その人が初めて開いた日の次の日23:59を期限にする
+  ・期限は「無料鑑定を送ってから7日間」＝その人が初めてこのページを開いた日の7日後の23:59（日本時間）。
+    再読み込みしても延びない。過ぎたら申込ボタンが消えて「LINEでアンジュに送る」だけになる
+  ・無料鑑定を送った日をきっちり基準にしたいときは、最後に ?d=（送った日の7日後の日付）を付ける
+    例）11/15に送る → https://ange-reishibar.github.io/kantei/?d=2026-11-22
     （初めて開いた日はその人のブラウザに保存。別のスマホ等で開くと、その日が基準になる）
   ・FALLBACK を false にすると、?d= なしのときは「1日5人まで受付」の表示
 
@@ -109,6 +108,21 @@ p+p{margin-top:1.3em}
 .cd .n{display:block;font-size:30px;line-height:1.1;color:var(--gold-hi);font-weight:800}
 .cd .l{display:block;font-family:"Noto Sans JP",sans-serif;font-size:10.5px;color:var(--dim);letter-spacing:.1em;margin-top:3px}
 .cd .c{font-size:26px;color:var(--gold-lo);padding-bottom:16px}
+.stock{max-width:340px;margin:20px auto 0;text-align:left;font-family:"Noto Sans JP",sans-serif}
+.stock .sl{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--mute);letter-spacing:.04em}
+.stock .sl b{color:var(--red-l);font-size:14px;letter-spacing:.08em}
+.stock .bar{height:8px;margin-top:6px;background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.stock .bar i{display:block;height:100%;width:92%;background:linear-gradient(90deg,var(--red),var(--red-l));box-shadow:0 0 10px rgba(240,122,106,.5)}
+.stock .sn{font-size:12px;color:var(--dim);margin-top:6px;text-align:center}
+.crowd{display:flex;gap:12px;align-items:flex-start;margin:34px 0 0;padding:18px 18px 16px;border:1px solid rgba(240,122,106,.45);background:linear-gradient(180deg,rgba(210,70,58,.12),rgba(210,70,58,.04));border-radius:var(--r);font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:1.85}
+.crowd .dot{flex:none;width:10px;height:10px;margin-top:7px;border-radius:50%;background:var(--red-l);box-shadow:0 0 0 0 rgba(240,122,106,.6);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(240,122,106,.6)}70%{box-shadow:0 0 0 10px rgba(240,122,106,0)}100%{box-shadow:0 0 0 0 rgba(240,122,106,0)}}
+.crowd .ct{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:16px;letter-spacing:0;color:var(--paper);margin-bottom:4px}
+.crowd b{color:var(--red-l)}
+.crowd .stock{margin:12px 0 0;max-width:none}
+.plan .nanto{margin-top:6px;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;font-weight:700;color:var(--red-l);letter-spacing:.06em}
+.plan .nanto+.price{margin-top:2px}
+.plan .off{display:inline-block;margin-top:8px;font-family:"Noto Sans JP",sans-serif;font-size:12.5px;font-weight:700;color:var(--cta-ink);background:var(--gold);padding:2px 10px;border-radius:3px}
 .closed{display:none}
 body.is-closed .closed{display:block}
 body.is-closed .open-only{display:none!important}
@@ -253,16 +267,22 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
 <div class="deadline">
   <div class="wrap">
     <div class="open-only">
-      <span class="tag">本格霊視鑑定 受付中</span>
-      <p class="t d-only"><span id="dl-date">--</span>まで<br>3名様限定の特別価格よ</p>
+      <span class="tag no-d">本格霊視鑑定 受付中</span><span class="tag d-only">7日間限定</span>
+      <p class="t d-only">無料鑑定を受け取ったあなただけの、<br>7日間だけの特別価格よ</p>
       <p class="t no-d">ひとりひとりと向き合うため、1日5人までの受付よ</p>
       <p class="p no-d">（粋）<b>4,980円</b>　／　（極）<b>9,980円</b></p>
-      <p class="p d-only">（粋）<s>通常10,000円</s> → <b>4,980円</b><br>（極）<s>通常20,000円</s> → <b>9,980円</b><br><span style="font-size:12px">枠が埋まり次第、通常価格に戻るわ</span></p>
+      <p class="p d-only">（粋）<s>通常10,000円</s> → <b>4,980円</b><br>（極）<s>通常20,000円</s> → <b>9,980円</b><br><span style="font-size:12px"><span id="dl-date">--</span>まで。再読み込みしても、残り時間は戻らないわ</span></p>
       <div class="cd d-only" aria-live="off">
         <div class="u"><span class="n" id="cd-d">-</span><span class="l">日</span></div><span class="c">:</span>
         <div class="u"><span class="n" id="cd-h">--</span><span class="l">時間</span></div><span class="c">:</span>
         <div class="u"><span class="n" id="cd-m">--</span><span class="l">分</span></div><span class="c">:</span>
         <div class="u"><span class="n" id="cd-s">--</span><span class="l">秒</span></div>
+      </div>
+      <p class="p d-only" style="font-size:12.5px">7日を過ぎたら、通常価格に戻るわよ</p>
+      <div class="stock">
+        <div class="sl"><span>今月お受けできる鑑定枠</span><b>残りわずか</b></div>
+        <div class="bar"><i></i></div>
+        <div class="sn">ひとりずつ視ているから、埋まったら順番待ちになるわ</div>
       </div>
     </div>
     <div class="closed">
@@ -368,6 +388,18 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
       <p class="center">どちらを選んでも、<br>おひとりずつ、私が視るわ。<br>ちがうのは、<em>どこまで深く、どこまで長く</em><br>あなたに付き合うか、よ。</p>
     </div>
 
+    <div class="crowd fx">
+      <span class="dot" aria-hidden="true"></span>
+      <div>
+        <div class="ct">ただいま、とても混み合っているの</div>
+        無料鑑定を受け取った方からのお申し込みが続いていて、<b>今月の枠は残りわずか</b>なのよ。ひとりずつ視ているから、埋まったら順番待ちになるわ。
+        <div class="stock">
+          <div class="sl"><span>今月の鑑定枠</span><b>売り切れ間近</b></div>
+          <div class="bar"><i></i></div>
+        </div>
+      </div>
+    </div>
+
     <table class="cmp fx">
       <thead><tr><th></th><th>（粋）<s class="d-only" style="display:block;font-size:11px">10,000円</s><small>4,980円</small></th><th class="rec">（極）<s class="d-only" style="display:block;font-size:11px">20,000円</s><small>9,980円</small></th></tr></thead>
       <tbody>
@@ -394,8 +426,10 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
         <div class="eyebrow">まずは粋に、ひとつだけ</div>
         <h3>アンジュの本格霊視鑑定<span class="kj">（粋）</span></h3>
         <p class="was d-only">通常価格 <s>10,000円</s></p>
+        <p class="nanto d-only">7日間限定で、なんと</p>
         <div class="price">4,980<small>円（税込）</small></div>
-        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only"><span class="dl-mini"></span>まで・3名様限定の特別価格</span></p>
+        <span class="off d-only">5,020円お得</span>
+        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only">この価格は <span class="dl-mini"></span> まで</span></p>
         <p class="what">いちばん気になっていることを一つ。いまの流れと、相手の本音と、明日からの動き方まで、まっすぐお伝えするわ。</p>
         <ul>
           <li>今のあなたの、状況と流れ</li>
@@ -420,8 +454,10 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
         <div class="eyebrow">霊視だけじゃない、魂ごと整える</div>
         <h3>アンジュの本格霊視鑑定<span class="kj">（極）</span></h3>
         <p class="was d-only">通常価格 <s>20,000円</s></p>
+        <p class="nanto d-only">7日間限定で、なんと</p>
         <div class="price">9,980<small>円（税込）</small></div>
-        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only"><span class="dl-mini"></span>まで・3名様限定の特別価格</span></p>
+        <span class="off d-only">半額以下　10,020円お得</span>
+        <p class="lim open-only"><span class="no-d">1日5人まで</span><span class="d-only">この価格は <span class="dl-mini"></span> まで</span></p>
         <p class="what">霊視だけじゃないの。<em>波動分析・波動調整・現状エネルギー、そして未来の整え方</em>まで。あなたの魂の声と真正面から向き合い、“最幸”な未来へと導くサポートよ。ご相談は2つまで、6か月先までの流れと、守護霊からのメッセージもお届けするわ。</p>
         <ul>
           <li>今のあなたの、状況と流れ</li>
@@ -550,7 +586,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
 
 <div class="sticky" id="sticky">
   <div class="in">
-    <div class="tx open-only"><b>4,980円〜</b>（粋）／（極）<span class="no-d"><br>1日5人まで受付</span><span class="d-only"><br>3名様限定・残り <span class="rm" id="st-rm">--</span></span></div>
+    <div class="tx open-only"><b>4,980円〜</b>（粋）／（極）<span class="no-d"><br>1日5人まで受付</span><span class="d-only"><br>7日間限定・残り <span class="rm" id="st-rm">--</span></span></div>
     <div class="tx closed"><b>ご案内は終わったわ</b>LINEで声をかけてね</div>
     <a class="open-only" href="#plans">メニューを見る</a>
     <a class="closed js-line" href="#">LINEへ</a>
@@ -564,7 +600,8 @@ var CONFIG = {
   STORES_GOKU: "https://uranai-pro.com/items/6af8a69024d4a36a1d325024",   // ② アンジュの本格霊視鑑定（極）のSTORES商品URL
   TOKUSHOHO:     "",   // STORESの特定商取引法ページのURL
   LINE:          "https://lin.ee/WIepITO",  // アンジュの公式LINE
-  FALLBACK:      true   // ?d= がないとき、初めて開いた日の次の日23:59を期限にする
+  FALLBACK:      true,  // ?d= がないとき、初めて開いた日の7日後23:59を期限にする
+  DAYS:          7      // 特別価格の日数
 };
 /* ============================================================ */
 
@@ -579,7 +616,7 @@ var CONFIG = {
   if (!CONFIG.STORES_SUI || !CONFIG.STORES_GOKU) console.warn("STORESの商品URLが未設定です（いまはLINEに飛びます）");
 
   /* 期限：?d=YYYY-MM-DD があればその日の23:59:59（日本時間）まで。
-     なければ、このブラウザで初めて開いた日（日本時間）の次の日の23:59:59まで */
+     なければ、このブラウザで初めて開いた日（日本時間）の7日後の23:59:59まで */
   var m = location.search.match(/[?&]d=(\d{4})-?(\d{2})-?(\d{2})/), end = 0;
   if (m) {
     end = Date.UTC(+m[1], +m[2]-1, +m[3], 23-9, 59, 59);
@@ -587,7 +624,7 @@ var CONFIG = {
     var KEY = "ange_kantei_first_open", first = 0;
     try { first = +localStorage.getItem(KEY) || 0; if (!first) { first = Date.now(); localStorage.setItem(KEY, String(first)); } } catch (e) { first = Date.now(); }
     var fj = new Date(first + 9 * 3600 * 1000);   // 初めて開いた日（日本時間）
-    end = Date.UTC(fj.getUTCFullYear(), fj.getUTCMonth(), fj.getUTCDate() + 1, 23-9, 59, 59);
+    end = Date.UTC(fj.getUTCFullYear(), fj.getUTCMonth(), fj.getUTCDate() + CONFIG.DAYS, 23-9, 59, 59);
   }
   if (end) {
     b.classList.add("has-d");
