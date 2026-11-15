@@ -498,7 +498,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
     <div class="chap fx"><span class="no">VII</span><span class="en">The flow</span><h2>鑑定が届くまで</h2></div>
     <ol class="flow fx">
       <li><span class="when">お申し込み</span><b>このページから、メニューを選んでご購入</b><p>お支払いが終われば、お申し込みは完了よ。</p></li>
-      <li><span class="when">ご購入のあと</span><b>専用LINEに「申し込み完了」と送る</b><p>本格運命霊視鑑定の専用LINEを友だち追加して、「本格運命霊視鑑定 申し込み完了」と、ご注文のときのお名前（フルネーム）を送ってちょうだい。私が確認するわ。</p><a class="cta ghost js-kline" href="#" style="margin-top:12px"><span class="m">専用LINEを友だち追加する</span></a></li>
+      <li><span class="when">ご購入のあと</span><b>専用LINEのご案内が届く</b><p>ご購入いただいた方にだけ、本格運命霊視鑑定の専用LINEをお知らせするわ。そこに「本格運命霊視鑑定 申し込み完了」と、ご注文のときのお名前（フルネーム）を送ってちょうだい。私が確認するわ。</p></li>
       <li><span class="when">確認できたら</span><b>ご相談内容を送る</b><p>・お名前（ニックネームでOK）<br>・生年月日<br>・ご相談内容（いまの状況、いちばん知りたいこと）<br>・お相手がいる場合は、お相手のお名前と生年月日（分かれば）<br>上手にまとめなくて大丈夫。くわしく教えてくれるほど、深く視られるわ。</p></li>
       <li><span class="when">（粋）3日〜1週間ほど／（極）48時間以内</span><b>専用LINEで、鑑定文をお届け</b><p>あなたのためだけの言葉で書くわ。何度でも読み返してちょうだい。</p></li>
     </ol>
@@ -586,7 +586,6 @@ var CONFIG = {
   STORES_GOKU: "https://uranai-pro.com/items/6af92fe5dd2154070f6c6e47",   // ② アンジュの本格運命霊視鑑定（極）のSTORES商品URL
   TOKUSHOHO:     "",   // STORESの特定商取引法ページのURL
   LINE:          "https://lin.ee/WIepITO",  // アンジュの公式LINE（迷ったとき・期限後の相談）
-  LINE_KANTEI:   "https://lin.ee/oe8MJsx",  // 本格運命霊視鑑定の専用LINE（ご購入後の連絡先）
   FALLBACK:      true,  // ?d= がないとき、初めて開いた日の7日後23:59を期限にする
   DAYS:          7      // 特別価格の日数
 };
@@ -598,7 +597,6 @@ var CONFIG = {
   setHref(".js-sui", CONFIG.STORES_SUI);
   setHref(".js-goku", CONFIG.STORES_GOKU);
   setHref(".js-line,[data-line]", CONFIG.LINE);
-  setHref(".js-kline", CONFIG.LINE_KANTEI);
   var tk = document.getElementById("tokushoho");
   if (CONFIG.TOKUSHOHO) { tk.href = CONFIG.TOKUSHOHO; tk.target = "_blank"; tk.rel = "noopener"; } else { tk.style.display = "none"; }
   if (!CONFIG.STORES_SUI || !CONFIG.STORES_GOKU) console.warn("STORESの商品URLが未設定です（いまはLINEに飛びます）");
