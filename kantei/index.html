@@ -18,14 +18,15 @@
   アンジュ＝オカマ霊視barのオーナー（オネエの霊視ママ）。
   黒・紫のネオン・金の仮面・赤い提灯。メニューは bar に合わせて
   本格運命霊視鑑定 4,980円（通常10,000円）。2026-11-17 粋・極をやめて1つにした
-  ・期限中だけ「通常価格（取り消し線）」「7日間限定」を表示
+  ・期限中だけ「通常価格（取り消し線）」「期間限定」を表示
     → 通常価格は、実際にその価格で販売した実績があることが前提（景品表示法の二重価格表示）
 
   ■ 使い方
-  ・期限は「無料鑑定を送ってから7日間」＝その人が初めてこのページを開いた日の7日後の23:59（日本時間）。
+  ・期限は「無料鑑定の次の日の23:59」（2026-11-18～。2日目に、あと3日延ばして鑑定書の日＋5日の23:59まで）。
+    ?d= がないときは、その人が初めてこのページを開いた日の次の日の23:59（日本時間）。
     再読み込みしても延びない。過ぎたら申込ボタンが消えて「LINEでアンジュに送る」だけになる
-  ・無料鑑定を送った日をきっちり基準にしたいときは、最後に ?d=（送った日の7日後の日付）を付ける
-    例）11/15に送る → https://ange-reishibar.github.io/kantei/?d=2026-11-22（2026/11/22 の形でもよい）
+  ・無料鑑定を送った日をきっちり基準にしたいときは、最後に ?d=（期限の日付）を付ける
+    例）11/17に送る → 鑑定書では ?d=2026-11-18、延ばしたあとは ?d=2026-11-22（2026/11/22 の形でもよい）
     エルメのステップでは ?d=[date add=日数 format=Y/n/j] で、その人の期限の日付が自動で入る
     （初めて開いた日はその人のブラウザに保存。別のスマホ等で開くと、その日が基準になる）
   ・FALLBACK を false にすると、?d= なしのときは「先着5名様まで」の表示
@@ -269,8 +270,8 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
 <div class="deadline">
   <div class="wrap">
     <div class="open-only">
-      <span class="tag no-d">本格運命霊視鑑定 受付中</span><span class="tag d-only">7日間限定</span>
-      <p class="t d-only">無料鑑定を受け取ったあなただけの、<br>7日間だけの特別価格よ</p>
+      <span class="tag no-d">本格運命霊視鑑定 受付中</span><span class="tag d-only">期間限定</span>
+      <p class="t d-only">無料鑑定を受け取ったあなただけの、<br>期限つきの特別価格よ</p>
       <p class="t no-d">特別価格は、先着5名様までよ</p>
       <p class="p no-d">本格運命霊視鑑定 <b>4,980円</b></p>
       <p class="p d-only">本格運命霊視鑑定 <s>通常10,000円</s> → <b>4,980円</b><br><span style="font-size:12px"><span id="dl-date">--</span>まで。再読み込みしても、残り時間は戻らないわ</span></p>
@@ -280,7 +281,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
         <div class="u"><span class="n" id="cd-m">--</span><span class="l">分</span></div><span class="c">:</span>
         <div class="u"><span class="n" id="cd-s">--</span><span class="l">秒</span></div>
       </div>
-      <p class="p d-only" style="font-size:12.5px">7日を過ぎたら、通常価格に戻るわよ</p>
+      <p class="p d-only" style="font-size:12.5px">期限を過ぎたら、通常価格に戻るわよ</p>
       <div class="stock">
         <div class="sl"><span>特別価格でお受けできるのは</span><b>先着5名様</b></div>
         <div class="sn">ひとりずつ視ているから、人数を決めているの。埋まったら、通常価格でのご案内になるわ</div>
@@ -404,7 +405,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
         <div class="eyebrow">霊視だけじゃない、魂ごと整える</div>
         <h3>アンジュの<br>本格運命霊視鑑定</h3>
         <p class="was d-only">通常価格 <s>10,000円</s></p>
-        <p class="nanto d-only">7日間限定で、なんと</p>
+        <p class="nanto d-only">期間限定で、なんと</p>
         <div class="price">4,980<small>円（税込）</small></div>
         <span class="off d-only">5,020円お得</span>
         <p class="lim open-only"><span class="no-d">先着5名様まで</span><span class="d-only">この価格は <span class="dl-mini"></span> まで</span></p>
@@ -531,7 +532,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
 
 <div class="sticky" id="sticky">
   <div class="in">
-    <div class="tx open-only"><b>4,980円</b>本格運命霊視鑑定<span class="no-d"><br>先着5名様まで</span><span class="d-only"><br>7日間限定・残り <span class="rm" id="st-rm">--</span></span></div>
+    <div class="tx open-only"><b>4,980円</b>本格運命霊視鑑定<span class="no-d"><br>先着5名様まで</span><span class="d-only"><br>期間限定・残り <span class="rm" id="st-rm">--</span></span></div>
     <div class="tx closed"><b>ご案内は終わったわ</b>LINEで声をかけてね</div>
     <a class="open-only" href="#plans">申し込む</a>
     <a class="closed js-line" href="#">LINEへ</a>
@@ -544,8 +545,8 @@ var CONFIG = {
   STORES_GOKU: "https://uranai-pro.com/items/6af92fe5dd2154070f6c6e47",   // 本格運命霊視鑑定のSTORES商品URL（2026-11-17 1つに。粋は販売終了）
   TOKUSHOHO:     "",   // STORESの特定商取引法ページのURL
   LINE:          "https://lin.ee/WIepITO",  // アンジュの公式LINE（迷ったとき・期限後の相談）
-  FALLBACK:      true,  // ?d= がないとき、初めて開いた日の7日後23:59を期限にする
-  DAYS:          7      // 特別価格の日数
+  FALLBACK:      true,  // ?d= がないとき、初めて開いた日の次の日23:59を期限にする
+  DAYS:          1      // ?d= がないときの特別価格の日数（次の日の23:59まで）
 };
 /* ============================================================ */
 
@@ -559,7 +560,7 @@ var CONFIG = {
   if (!CONFIG.STORES_GOKU) console.warn("STORESの商品URLが未設定です（いまはLINEに飛びます）");
 
   /* 期限：?d=YYYY-MM-DD があればその日の23:59:59（日本時間）まで。
-     なければ、このブラウザで初めて開いた日（日本時間）の7日後の23:59:59まで */
+     なければ、このブラウザで初めて開いた日（日本時間）の DAYS 日後の23:59:59まで */
   var q = location.search; try { q = decodeURIComponent(q); } catch (e) {}
   var m = q.match(/[?&]d=(\d{4})[-\/年.](\d{1,2})[-\/月.](\d{1,2})/) || q.match(/[?&]d=(\d{4})(\d{2})(\d{2})/), end = 0;
   if (m) {
