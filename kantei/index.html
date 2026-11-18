@@ -29,8 +29,8 @@
     例）11/17に送る → 鑑定書では ?d=2026-11-18、延ばしたあとは ?d=2026-11-22（2026/11/22 の形でもよい）
     エルメのステップでは ?d=[date add=日数 format=Y/n/j] で、その人の期限の日付が自動で入る
     （初めて開いた日はその人のブラウザに保存。別のスマホ等で開くと、その日が基準になる）
-  ・FALLBACK を false にすると、?d= なしのときは「先着5名様まで」の表示
-  ・特別価格は先着5名様まで（2026-11-15 俊也さん決定）。本当に5名で止める
+  ・FALLBACK を false にすると、?d= なしのときは「先着3名様まで」の表示
+  ・特別価格は先着3名様まで（2026-11-15 俊也さん決定は5名、2026-11-18 3名に変更）。本当に3名で止める
 
   ■ 公開前に入れるもの（下の CONFIG）
   ・STORESの本格運命霊視鑑定の商品URL、特定商取引法ページのURL
@@ -272,7 +272,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
     <div class="open-only">
       <span class="tag no-d">本格運命霊視鑑定 受付中</span><span class="tag d-only">期間限定</span>
       <p class="t d-only">無料鑑定を受け取ったあなただけの、<br>期限つきの特別価格よ</p>
-      <p class="t no-d">特別価格は、先着5名様までよ</p>
+      <p class="t no-d">特別価格は、先着3名様までよ</p>
       <p class="p no-d">本格運命霊視鑑定 <b>4,980円</b></p>
       <p class="p d-only">本格運命霊視鑑定 <s>通常10,000円</s> → <b>4,980円</b><br><span style="font-size:12px"><span id="dl-date">--</span>まで。再読み込みしても、残り時間は戻らないわ</span></p>
       <div class="cd d-only" aria-live="off">
@@ -283,7 +283,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
       </div>
       <p class="p d-only" style="font-size:12.5px">期限を過ぎたら、通常価格に戻るわよ</p>
       <div class="stock">
-        <div class="sl"><span>特別価格でお受けできるのは</span><b>先着5名様</b></div>
+        <div class="sl"><span>特別価格でお受けできるのは</span><b>先着3名様</b></div>
         <div class="sn">ひとりずつ視ているから、人数を決めているの。埋まったら、通常価格でのご案内になるわ</div>
       </div>
     </div>
@@ -344,10 +344,13 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
     <div class="layers fx">
       <div class="layer"><div class="k">1</div><div class="v"><b>今あなたがいる、運命の流れ</b><span>いま、どんな流れの中にいるのか。見えている問題の奥にあるものまで読み解くわ。</span></div></div>
       <div class="layer"><div class="k">2</div><div class="v"><b>流れを止めている原因（魂のブロック）</b><span>なぜ同じところで立ち止まってしまうのか。その流れをせき止めているものを視るの。</span></div></div>
-      <div class="layer"><div class="k">3</div><div class="v"><b>これからの、最善の方向性</b><span>ここから、どちらへ進めばいいのか。あなたが進むべき方向をお伝えするわ。</span></div></div>
-      <div class="layer"><div class="k">4</div><div class="v"><b>運命が動く時期（転機のタイミング）</b><span>流れが変わるのは、いつ頃なのか。転機が訪れる時期を視るわ。</span></div></div>
-      <div class="layer"><div class="k">5</div><div class="v"><b>お相手・周りの方の本音</b><span>お相手がいるご相談なら、相手の本音や、二人の間に流れているものを視るの。</span></div></div>
-      <div class="layer"><div class="k">6</div><div class="v"><b>本来の宿命と、未来を整える波動調整</b><span>あなたが本来持っている宿命を視通して、これからの未来へ向けて波動を整えるわ。</span></div></div>
+      <div class="layer"><div class="k">3</div><div class="v"><b>不安除去</b><span>心の奥に居座っている不安の正体を視て、手放していけるようにするわ。</span></div></div>
+      <div class="layer"><div class="k">4</div><div class="v"><b>悪霊退散</b><span>よくないものが寄ってきていないかを視て、あれば祓っていくわ。</span></div></div>
+      <div class="layer"><div class="k">5</div><div class="v"><b>これからの、最善の方向性</b><span>ここから、どちらへ進めばいいのか。あなたが進むべき方向をお伝えするわ。</span></div></div>
+      <div class="layer"><div class="k">6</div><div class="v"><b>運命が動く時期（転機のタイミング）</b><span>流れが変わるのは、いつ頃なのか。転機が訪れる時期を視るわ。</span></div></div>
+      <div class="layer"><div class="k">7</div><div class="v"><b>お相手・周りの方の本音</b><span>お相手がいるご相談なら、相手の本音や、二人の間に流れているものを視るの。</span></div></div>
+      <div class="layer"><div class="k">8</div><div class="v"><b>本来の宿命</b><span>あなたが本来持っている宿命を、魂の奥から視通すわ。</span></div></div>
+      <div class="layer"><div class="k">9</div><div class="v"><b>未来を整える波動調整</b><span>これからの未来へ向けて、あなたの波動を整えるわ。</span></div></div>
     </div>
     <div class="fx" style="margin-top:40px">
       <p>恋愛・復縁・仕事・人間関係・お金・生き方。<br>どんなテーマでも、<em>あなたの状況に合わせて</em>視ていくわ。</p>
@@ -390,8 +393,8 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
     <div class="crowd fx">
       <span class="dot" aria-hidden="true"></span>
       <div>
-        <div class="ct">特別価格は、先着5名様まで</div>
-        ひとりずつ丁寧に視ているから、特別価格でお受けできるのは<b>5名様まで</b>なの。埋まったら、通常価格でのご案内になるわ。
+        <div class="ct">特別価格は、先着3名様まで</div>
+        ひとりずつ丁寧に視ているから、特別価格でお受けできるのは<b>3名様まで</b>なの。埋まったら、通常価格でのご案内になるわ。
       </div>
     </div>
 
@@ -408,15 +411,18 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
         <p class="nanto d-only">期間限定で、なんと</p>
         <div class="price">4,980<small>円（税込）</small></div>
         <span class="off d-only">5,020円お得</span>
-        <p class="lim open-only"><span class="no-d">先着5名様まで</span><span class="d-only">この価格は <span class="dl-mini"></span> まで</span></p>
+        <p class="lim open-only"><span class="no-d">先着3名様まで</span><span class="d-only">この価格は <span class="dl-mini"></span> まで</span></p>
         <p class="what">運命の流れから、転機が訪れる時期、本来の宿命まで。あなたの魂の奥深くまで視通す、<em>運命霊視・波動調整のフルセッション</em>よ。人生を本気で動かしたい方へ、おすすめの鑑定です。</p>
         <ul>
-          <li>今あなたがいる運命の流れ</li>
+          <li>今いる運命の流れ</li>
           <li>流れを止めている原因（魂のブロック）</li>
+          <li>不安除去</li>
+          <li>悪霊退散</li>
           <li>これからの最善の方向性</li>
           <li>運命が動く時期（転機のタイミング）</li>
           <li>お相手・周りの方の本音</li>
-          <li>本来の宿命と、未来を整える波動調整</li>
+          <li>本来の宿命</li>
+          <li>未来を整える波動調整</li>
           <li class="plus">48時間以内に、優先してお届け</li>
         </ul>
         <p class="fit">「人生を変える覚悟ができた」「運氣を底上げしたい」。そんな方にこそ受けてほしいの。悩みがいくつもつながっている方、同じところで何度もつまずいている方も、こちらで根っこから整えましょう。</p>
@@ -478,7 +484,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
       <p>状況が変わったら、また声をかけて。このお店は、ちゃんと開けて待ってるから。</p>
     </div>
     <p class="lead fx">暮らしを壊さずに<br>来られる人は、<br>いらっしゃい。</p>
-    <a class="cta fx open-only" href="#plans"><span class="m">鑑定を申し込む</span><span class="s d-only">期限を過ぎると、このご案内は終わります</span><span class="s no-d">先着5名様・お申し込みは1分ほど</span></a>
+    <a class="cta fx open-only" href="#plans"><span class="m">鑑定を申し込む</span><span class="s d-only">期限を過ぎると、このご案内は終わります</span><span class="s no-d">先着3名様・お申し込みは1分ほど</span></a>
   </div>
 </section>
 
@@ -491,7 +497,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
       <details><summary>無料鑑定とは、何が違いますか。</summary><div class="a">無料鑑定は、今いちばん表に出ているものを視るもの。本格運命霊視鑑定は、その奥にある原因から、運命が動く時期、お相手の本音、本来の宿命まで視て、波動調整までするフルセッションよ。迷ったら、LINEで状況を送って。</div></details>
       <details><summary>どんな相談でもいいですか。</summary><div class="a">恋愛・復縁・仕事・人間関係・お金・生き方、なんでもどうぞ。ただ、生死、病気や妊娠の成否、政治、ギャンブル、試験の合否、他人の不幸につながるご相談はお受けできないの。ごめんなさいね。</div></details>
       <details><summary>どれくらいで届きますか。</summary><div class="a">ご相談内容を受け取ってから48時間以内に、優先してLINEでお届けするわ。</div></details>
-      <details><summary>「先着5名様」に入れなかったら？</summary><div class="a">5名様に達したら、特別価格のご案内はそこで終わりよ。そのあとは通常価格でお受けするわ。ひとりずつちゃんと向き合うために、人数を決めているの。</div></details>
+      <details><summary>「先着3名様」に入れなかったら？</summary><div class="a">3名様に達したら、特別価格のご案内はそこで終わりよ。そのあとは通常価格でお受けするわ。ひとりずつちゃんと向き合うために、人数を決めているの。</div></details>
       <details><summary>家族や周りに知られませんか。</summary><div class="a">鑑定文はLINEにだけお届けするわ。郵送物など、おうちに届くものは一切ないから安心して。</div></details>
       <details><summary>あとから、お守りや道具を買う必要はありますか。</summary><div class="a">ないわ。鑑定の中で、石や道具を買うようにすすめることはないの。追加のお金はかからないわよ。鑑定のあと、続けてサポートを希望する方にはご案内を送ることがあるけど、受けるかどうかはあなたの自由よ。</div></details>
       <details><summary>相談内容をうまく書ける自信がありません。</summary><div class="a">大丈夫。長く書かなくていいし、まとまってなくていいの。思いついたままの言葉で送ってちょうだい。</div></details>
@@ -532,7 +538,7 @@ footer .copy{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--d
 
 <div class="sticky" id="sticky">
   <div class="in">
-    <div class="tx open-only"><b>4,980円</b>本格運命霊視鑑定<span class="no-d"><br>先着5名様まで</span><span class="d-only"><br>期間限定・残り <span class="rm" id="st-rm">--</span></span></div>
+    <div class="tx open-only"><b>4,980円</b>本格運命霊視鑑定<span class="no-d"><br>先着3名様まで</span><span class="d-only"><br>期間限定・残り <span class="rm" id="st-rm">--</span></span></div>
     <div class="tx closed"><b>ご案内は終わったわ</b>LINEで声をかけてね</div>
     <a class="open-only" href="#plans">申し込む</a>
     <a class="closed js-line" href="#">LINEへ</a>
